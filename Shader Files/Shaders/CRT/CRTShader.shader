@@ -48,7 +48,7 @@ Shader "Custom/URP/CRTShader"
                 float2 baseUV = input.texcoord; // Use fullscreen pass UV coords to sample the current rendered screen image.
 
                 // Convert UV coords into a centred -1 to 1 range for distortion.
-                float2 uv = baseUV * 2.0 - 1.0
+                float2 uv = baseUV * 2.0 - 1.0;
 
                 // Apply a simple CRT-style barrel distortion.
                 float2 offset = uv.yx / _Curvature;
